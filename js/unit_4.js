@@ -58,3 +58,34 @@ const res3 = ar1.map((a) => {
   return a ** 2;
 });
 console.log(res3);
+
+// ------------------------------
+
+const res4 = ar1.map((a) => a ** 2);
+console.log(res4);
+
+// ------------------------------
+const res5 = ar1.filter((index) => index % 2 === 0);
+
+console.log(res5);
+
+// ------------------------------
+// arrow & this
+
+btn3.addEventListener("click", function () {
+  console.log(this);
+});
+
+btn3.addEventListener("click", () => {
+  console.log(this);
+});
+
+// ------------------------------
+// arrow & arguments
+
+const f1 = (...arg) => {
+  console.log(arg);
+  console.log("work");
+};
+
+f1(99, 100);
